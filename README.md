@@ -57,7 +57,15 @@
     - *ui*
         - web
             - handlers
+                - list_post_handler.go
+                - list_post_handler_test.go
+                - log_handler.go
+                - log_handler_test.go
+                - template_handler.go
+                - template_handler_test.go
+                - ...
             - lib
+                - template_renderer.go
             - ports
             - test
             - router.go
