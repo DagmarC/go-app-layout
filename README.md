@@ -1,7 +1,10 @@
 ## Project structure example
 
 > Example is by the https://github.com/geisonbiazus/blog/tree/main
-> Note: the project holds only some of the folders and files just to demonstrate how applying the concepts of clean architecture could divide the app into the separate parts.
+
+> NOTE.1: the project holds only some of the folders and files just to demonstrate how applying the concepts of clean architecture could divide the app into the separate parts.
+
+> NOTE.2: README.md does not contain all the files that the actual project example does.
 
 - **cmd** — Contains the main file for the delivery mechanism (web). deployment — Deployment scripts.
     - **web** *main.go* (calls app.NewContext(), heart of the app)
@@ -9,9 +12,29 @@
 - **internal** — The *most important folder*, contains the implementation of all the layers and components.
     - *adapters*
         - cache
+        - postrepo
+            - filesystem
+                - fixtures (for tests)
+                    - posts
+                        - test-post-1.md
+                    - empty_folder
+                    - invalid folder
+                - parser.go
+                - parser_test.go
+                - post_repo.go
+                - post_repo_test.go
+            - post_repo.go (CONSTRUCTOR)
+        - renderer
+            - goldmark
+                - renderer.go
+                - renderer_test.go
+            - renderer.go (CONSTRUCTOR)
         - userrepo
             - memory
+                - user_repo.go
             - postgres
+                - user_repo.go
+                - user_repo_test.go
             - user_repo.go (CONSTRUCTOR)
         - oauth2provider
             - fake
