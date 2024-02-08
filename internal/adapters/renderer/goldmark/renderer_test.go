@@ -1,5 +1,4 @@
-package goldmark
-
+package goldmark_test
 // imports examples See GOLDMARK
 
 // "github.com/alecthomas/chroma/formatters/html"

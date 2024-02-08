@@ -1,1 +1,1 @@
-package blog
+package blog_test
